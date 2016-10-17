@@ -1,4 +1,12 @@
 <div>
-  <!--Imprimimos variable "name" de nuestro componente-->
   <h2>Hello {{name}}</h2>
+
+  <!--7/ Structural Directives van precedidas por un * asterisco-->
+  <!--*ngIf comprueba si "isVisible" es true. Prueba a cambiarlo por !isVisible-->
+  <section *ngIf="isVisible">
+    <!--3/ *ngFor functiona como un for...of loop-->
+    <article *ngFor="let item of list">
+      Id: {{item.id}}, Title: {{item.title}}
+    </article>
+  </section>
 </div>

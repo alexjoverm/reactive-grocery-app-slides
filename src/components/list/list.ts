@@ -1,5 +1,5 @@
-// Importamos Input
-import {Component, Input} from '@angular/core'
+// Importamos Output y EventEmitter
+import {Component, Input, Output, EventEmitter} from '@angular/core'
 
 @Component({
   moduleId: __moduleName,
@@ -7,6 +7,13 @@ import {Component, Input} from '@angular/core'
   templateUrl: 'list.html'
 })
 export class ListComponent {
-  // Usamos @Input decorator para obtener el parámetro list
   @Input() list
+  // 3/ Creamos el Output. El nombre de la variable será el nombre
+  // del custom event utilizado desde fuera
+  @Output() delete = new EventEmitter()
+
+  // 3/ Emitimos el evento, pasando la lista como argumento
+  deleteItem() {
+    this.delete.emit(this.list)
+  }
 }

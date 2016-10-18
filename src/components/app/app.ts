@@ -11,10 +11,13 @@ export class App {
   isVisible: boolean
   list: any[]
 
-  // 5/ Definir isVisible, y una lista de objectos
   constructor() {
     this.name = 'Angular2'
     this.isVisible = true
-    this.list = [{ id: 0, title: 'Paco' }, { id: 1, title: 'Pepe' }]
+    // 4/ Añadimos una propiedad class, para el ejemplo
+    this.list = [
+      { id: 0, title: 'Paco', class: 'red' },
+      { id: 1, title: 'Pepe', class: 'red' }
+    ]
   }
 }

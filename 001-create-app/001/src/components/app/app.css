@@ -1,0 +1,9 @@
+/* 4/ Mediante :host accedemos al estilo del component en si */
+:host {
+  display: block;
+  background: #6dd;
+}
+
+h2 {
+  color: #444;
+}

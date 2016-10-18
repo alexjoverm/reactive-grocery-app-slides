@@ -1,0 +1,32 @@
+<div>
+  <h2>Hello {{name}}</h2>
+
+  <!--7/ Property binding va entre corchetes [] y evaluan una expresion-->
+  <section>
+    <!-- Añade la clase blue cuando se cumpla la condicion -->
+    <article class="list-item" [class.blue]="item.id == 0" *ngFor="let item of list">
+      Id: {{item.id}}, Title: {{item.title}}
+    </article>
+  </section>
+
+  <br>
+
+  <!--7/ Structural directives suelen aplicar "binding"-->
+  <section>
+    <!-- Podemos reescribir el ejemplo anterior con ngClass -->
+    <article class="list-item" [ngClass]="{'blue': item.id == 0}" *ngFor="let item of list">
+      Id: {{item.id}}, Title: {{item.title}}
+    </article>
+  </section>
+
+  <br>
+
+  <!-- 8/ Tanto la attribute directive ngClass como el property -->
+  <!----  binding [class] aceptan diferentes sintaxis-->
+  <section>
+    <!-- En este ejemplo, [class] sobrescribe la clase por defect list-item -->
+    <article class="list-item" [class]="item.class" *ngFor="let item of list">
+      Id: {{item.id}}, Title: {{item.title}}
+    </article>
+  </section>
+</div>

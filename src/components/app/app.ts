@@ -14,10 +14,15 @@ export class App {
   constructor() {
     this.name = 'Angular2'
     this.isVisible = true
-    // 4/ Añadimos una propiedad class, para el ejemplo
+
     this.list = [
       { id: 0, title: 'Paco', class: 'red' },
       { id: 1, title: 'Pepe', class: 'red' }
     ]
+  }
+
+  // 3/ Toggleamos isVisible
+  toggleVisible () {
+    this.isVisible = !this.isVisible
   }
 }

@@ -1,8 +1,15 @@
 <h2>Listas de compra:</h2>
 
 <section>
-  <!-- 3/ Capturamos evento delete -->
-  <!-- con la variable $event accedemos al payload emitido-->
   <list [list]="list" (delete)="deleteList($event)"
     *ngFor="let list of lists"></list>
+
+  <!--Empecemos por añadir ngSubmit a un form-->
+  <form (ngSubmit)="createList(tempList)">
+    <!--3/ Con ngModel "bindeamos" una variable al "value" de un input-->
+    <!--La notacion "banana box [()]" denota two-way databinding-->
+    <!--El attributo "name" es necesario-->
+    <input name="title" [(ngModel)]="tempList.title">
+    <button type="submit">Crear lista</button>
+  </form>
 </section>

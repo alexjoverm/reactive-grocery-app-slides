@@ -7,6 +7,8 @@ import {Component} from '@angular/core'
 })
 export class GroceriesContainer {
   lists
+  // Definimos una lista temporal como modelo del formulario
+  tempList = {}
 
   constructor() {
     this.lists = [
@@ -15,9 +17,17 @@ export class GroceriesContainer {
     ]
   }
 
-  // 4/ Borrar lista del array
   deleteList(list) {
-    // FRP tip: no mutar lists
     this.lists = this.lists.filter(l => l.id !== list.id)
+  }
+
+  // 8/ Añadimos la lista al array
+  createList(list) {
+    // 5/ Ojo! Añade un objeto nuevo, no añadas "list" en si
+    this.lists.push({
+      id: 'random',
+      title: list.title,
+      items: []
+    })
   }
 }

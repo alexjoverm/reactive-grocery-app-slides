@@ -1,0 +1,59 @@
+
+    <!DOCTYPE html>
+    <html xp-run-server-url="https://xpla.org">
+      <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width">
+        <title>Interacción P-H</title>
+        <script src="https://xpla.org/static/js/slide_loader.3.0.0.js"></script>
+      </head>
+      <body class="xp-slide">
+        <div class="xp-row with-comments">
+
+
+    <div class="xp-column">
+      <xp-editor active="config.js" >
+        	<script id="config.js" highlight="1-46" type="application/octetstream" src="001/config.js"></script>
+          <script id="index.html" highlight="1-25" type="application/octetstream" src="001/index.html"></script>
+          <script id="src/app.module.ts" highlight="1-20" type="application/octetstream" src="001/src/app.module.ts"></script>
+          <script id="src/app/app.css" highlight="1-8" type="application/octetstream" src="001/src/app/app.css"></script>
+          <script id="src/app/app.html" highlight="1-4" type="application/octetstream" src="001/src/app/app.html"></script>
+          <script id="src/app/app.ts" highlight="1-10" type="application/octetstream" src="001/src/app/app.ts"></script>
+          <script id="src/components/groceries/groceries.html" highlight="1-7" type="application/octetstream" src="001/src/components/groceries/groceries.html"></script>
+          <script id="src/components/groceries/groceries.ts" highlight="1-27" type="application/octetstream" src="001/src/components/groceries/groceries.ts"></script>
+          <script id="src/components/list/list.html" highlight="1-7" type="application/octetstream" src="001/src/components/list/list.html"></script>
+          <script id="src/components/list/list.ts" highlight="1-12" type="application/octetstream" src="001/src/components/list/list.ts"></script>
+          <script id="src/main.ts" highlight="1-4" type="application/octetstream" src="001/src/main.ts"></script>
+      </xp-editor>
+    </div>
+
+    <div class="xp-resize-column"></div>
+
+    <div class="xp-column">
+      <xp-preview runner="html"></xp-preview>
+    </div>
+
+
+        </div>
+        <div class="xp-resize-row"></div>
+        <div class="xp-row comments">
+          <xp-annotations>
+            <header><h1>Interacción Padre-Hijo</h1></header>
+            <details>
+              <p>Hemos creado todo el código en el componente <b>App</b>. Eso no lo hace reusable ni mantenible, por lo que
+              es buena practica dividir la lógica en componentes más pequeños y reusables. Para ello, existen <b>dos tipos</b>
+              conceptuales de componentes:</p>
+              <ul>
+                <li><b>Containers: </b>contienen lógica y estado relativos a la app,
+                  y se encarga de manejar otros componentes. También se les conoce como <b>Pages</b></li>
+                <li><b>Componentes (presentacionales): </b>sólo tienen lógica relativos al mismo componente,
+                  y sus datos y estado sólo se insertan mediante propiedades. Son totalmente reusable.
+                   También se les conoce como <b>Dummy components</b></li>
+              </ul>
+              <p>Vemos cómo crear un contenedor <b>Groceries</b> y un componente <b>List</b>, y ver cómo interactuar
+              de <b>padre a hijo</b> (de container a component)</p>
+            </details>
+          </xp-annotations>
+        </div>
+      </body>
+    </html>

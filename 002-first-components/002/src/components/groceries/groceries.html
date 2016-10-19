@@ -1,0 +1,8 @@
+<h2>Listas de compra:</h2>
+
+<section>
+  <!-- 3/ Capturamos evento delete -->
+  <!-- con la variable $event accedemos al payload emitido-->
+  <list [list]="list" (delete)="deleteList($event)"
+    *ngFor="let list of lists"></list>
+</section>

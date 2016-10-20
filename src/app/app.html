@@ -1,14 +1,11 @@
 <h2>Listas</h2>
 
 <section>
-  <p *ngFor="let list of lists">
+  <p *ngFor="let list of lists$ | async">
     {{list.title}}
   </p>
 
   <input [(ngModel)]="newList.title">
   <br>
   <button (click)="createList()">Crear lista</button><br>
-  <button (click)="createListWithClone()">Crear lista (clon)</button><br>
-  <button (click)="editList()">Editar listas</button><br>
-  <button (click)="deleteList()">Borrar lista</button><br>
 </section>

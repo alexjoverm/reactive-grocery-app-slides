@@ -30,7 +30,6 @@ System.config({
     '@angular/http/testing': 'npm:@angular/http/bundles/http-testing.umd.js',
     '@angular/router/testing': 'npm:@angular/router/bundles/router-testing.umd.js',
 
-    // 2/ Añadir estas dos lineas a config.js
     '@ngrx/core': 'npm:@ngrx/core/bundles/core.umd.js',
     '@ngrx/store': 'npm:@ngrx/store/bundles/store.umd.js',
 

@@ -6,6 +6,9 @@ import { reducer } from './reducer'
 
 import {App} from './app/app'
 
+// Incluimos todo RxJS (para el ejemplo)
+import 'rxjs/Rx'
+
 @NgModule({
   imports: [
     BrowserModule,

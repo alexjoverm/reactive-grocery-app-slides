@@ -1,8 +1,8 @@
 import { Action } from '@ngrx/store'
 
 export const initialState = [
-  { title: 'Paco' },
-  { title: 'Pepe' }
+  { id: 0, title: 'Paco' },
+  { id: 1, title: 'Pepe' }
 ]
 
 export const ADD_LIST = 'ADD_LIST'

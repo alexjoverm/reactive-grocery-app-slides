@@ -1,6 +1,8 @@
-import { Component } from '@angular/core'
+// 3/ 4. Siempre es necesario subscribirse a un observable.
+// Si no utilizamos async pipe, tenemos que subscribir manualmente
+// 5. Para ello utilizaremos los ciclos de vida OnInit y OnDestroy
+import { Component, OnInit, OnDestroy } from '@angular/core'
 import { Store } from '@ngrx/store'
-// Importar los action types
 import { ADD_LIST } from '../reducer'
 
 @Component({
@@ -8,19 +10,40 @@ import { ADD_LIST } from '../reducer'
   selector: 'my-app',
   templateUrl: 'app.html'
 })
-export class App {
+// 6. Los declaramos con implements
+export class App implements OnInit, OnDestroy{
   lists$
+  lists
+  listsSubs
   newList = {}
 
   constructor(private store: Store<any>) {
-    this.lists$ = this.store.select(state => state.lists)
+    // 8/ 1. lists$ es un Observable, al que se le puede aplicar
+    //-- differentes operadores (ver más en https://www.learnrxjs.io)
+    this.lists$ = this.store
+      .select(state => state.lists)
+      // 2. map transforma la entrada proveniente el operador anterior
+      .map(lists => [...lists, { id: 23423, title: 'Otro mas' }])
+      // 3. do va bien para debuggear
+      .do(console.log)
   }
 
-  // 5/ Crear una lista en el store
+  // 6/ 7. Implementamos ngOnInit y ngOnDestroy
+  ngOnInit() {
+    // 3/ 8. Subscribe devuelve un Subscription, que usaremos para desubscribir
+    this.listsSubs = this.store
+      .select(state => state.lists)
+      .subscribe(lists => this.lists = lists)
+  }
+
+  // 3/ 9. Y no olvides desubscribir
+  ngOnDestroy() {
+    this.listsSubs.unsubscribe()
+  }
+
   createList() {
     const randomId = Math.floor(Math.random() * 1000)
     const list = Object.assign({}, this.newList, { id: randomId })
-    // Usamos store.dispatch, siempre con estructure {type, payload}
     this.store.dispatch({ type: ADD_LIST, payload: list })
   }
 

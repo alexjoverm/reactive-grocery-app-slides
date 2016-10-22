@@ -1,0 +1,51 @@
+
+    <!DOCTYPE html>
+    <html xp-run-server-url="https://xpla.org">
+      <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width">
+        <title>Reducer</title>
+        <script src="https://xpla.org/static/js/slide_loader.3.0.0.js"></script>
+      </head>
+      <body class="xp-slide">
+        <div class="xp-row with-comments">
+
+
+    <div class="xp-column">
+      <xp-editor active="config.js" >
+        	<script id="config.js" highlight="1-50" type="application/octetstream" src="001/config.js"></script>
+	<script id="index.html" highlight="1-25" type="application/octetstream" src="001/index.html"></script>
+	<script id="src/app.module.ts" highlight="1-18" type="application/octetstream" src="001/src/app.module.ts"></script>
+	<script id="src/app/app.html" highlight="1-7" type="application/octetstream" src="001/src/app/app.html"></script>
+	<script id="src/app/app.ts" highlight="1-20" type="application/octetstream" src="001/src/app/app.ts"></script>
+	<script id="src/main.ts" highlight="1-4" type="application/octetstream" src="001/src/main.ts"></script>
+	<script id="src/reducer.ts" highlight="1-25" type="application/octetstream" src="001/src/reducer.ts"></script>
+      </xp-editor>
+    </div>
+
+    <div class="xp-resize-column"></div>
+
+    <div class="xp-column">
+      <xp-preview runner="html"></xp-preview>
+    </div>
+
+
+        </div>
+        <div class="xp-resize-row"></div>
+        <div class="xp-row comments">
+          <xp-annotations>
+            <header><h1>Primer reducer</h1></header>
+            <details>
+              <p>Redux tiene 4 pilares básicos:</p>
+              <ul>
+                <li><b>State:</b> Mantiene los datos de la app.</li>
+                <li><b>Reducer:</b> <b>Funciones puras</b> que actualizan el estado de manera <b>immutable</b> (devolviendo un nuevo estado).</li>
+                <li><b>Actions:</b> Objecto que indica al reducer qué debe hacer con el estado, pasándole los datos.</li>
+                <li><b>Store:</b> Entidad <b>única</b> que combina los elementos anteriores.</li>
+              </ul>
+              <p>Utilizaremos <b>NgRx store</b>, una implementación de <b>Redux</b> que utiliza <b>RxJS</b>.</p>
+            </details>
+          </xp-annotations>
+        </div>
+      </body>
+    </html>

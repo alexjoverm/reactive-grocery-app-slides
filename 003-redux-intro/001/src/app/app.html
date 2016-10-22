@@ -1,0 +1,7 @@
+<h2>Listas</h2>
+
+<section>
+  <p *ngFor="let list of lists$ | async">
+    {{list.title}}
+  </p>
+</section>

@@ -1,0 +1,22 @@
+<h2>Listas</h2>
+
+<section>
+  <h3>Async pipe lists$</h3>
+  <!--4/ async pipe subscribe y desubscribe automaticamente, usando los-->
+  <!--ciclos de vida (Init y Destroy)-->
+  <p *ngFor="let list of lists$ | async">
+    {{list.title}}
+  </p>
+
+  <h3>Manual subscribe lists</h3>
+  <!--3/ Importante: si tienes que usar lists$ más de una vez en el template-->
+  <!---- estarias repitiendo subscripciones (1 async = 1 subscripcion). En tal caso-->
+  <!---- es mejor controlar la subscripción manualmente-->
+  <p *ngFor="let list of lists">
+    {{list.title}}
+  </p>
+
+  <input [(ngModel)]="newList.title">
+  <br>
+  <button (click)="createList()">Crear lista</button><br>
+</section>

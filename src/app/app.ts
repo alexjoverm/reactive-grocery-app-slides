@@ -12,14 +12,10 @@ export class App implements OnInit, OnDestroy{
   lists$
   newList = {}
 
-  // 9/ Utilizamos nuestro Selector
   constructor(
     private store: Store<any>,
-    // Lo inyectamos
     private selector: Selector
   ) {
-    // 2/ Usando el selector, abstraemos el componente del
-    // procesamiento de obtener el estado en el formato deseado
     this.lists$ = this.selector.getLists()
   }
 

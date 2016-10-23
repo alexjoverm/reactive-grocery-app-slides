@@ -1,0 +1,55 @@
+
+    <!DOCTYPE html>
+    <html xp-run-server-url="https://xpla.org">
+      <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width">
+        <title>Estructuras escalables</title>
+        <script src="https://xpla.org/static/js/slide_loader.3.0.0.js"></script>
+      </head>
+      <body class="xp-slide">
+        <div class="xp-row with-comments">
+
+
+    <div class="xp-column">
+      <xp-editor active="src/app/app.ts" >
+        	<script id="src/app/app.ts" highlight="12-21" type="application/octetstream" src="002/src/app/app.ts"></script>
+	<script id="src/reducer.ts" highlight="1-27" type="application/octetstream" src="002/src/reducer.ts"></script>
+	<script id="src/selector.ts" highlight="9-32" type="application/octetstream" src="002/src/selector.ts"></script>
+	<script id="config.js" type="application/octetstream" src="001/config.js"></script>
+	<script id="index.html" type="application/octetstream" src="001/index.html"></script>
+	<script id="src/app.module.ts" type="application/octetstream" src="001/src/app.module.ts"></script>
+	<script id="src/main.ts" type="application/octetstream" src="001/src/main.ts"></script>
+	<script id="src/app/app.html" type="application/octetstream" src="001/src/app/app.html"></script>
+      </xp-editor>
+    </div>
+
+    <div class="xp-resize-column"></div>
+
+    <div class="xp-column">
+      <xp-preview runner="html"></xp-preview>
+    </div>
+
+
+        </div>
+        <div class="xp-resize-row"></div>
+        <div class="xp-row comments">
+          <xp-annotations>
+            <header><h1>Estructuras escalables</h1></header>
+            <details>
+              <p>Segunda práctica: tratar el <b>State como si fuera una BBDD</b>, en vez de como el UI lo desee.
+               Para ello:</p>
+              <ul>
+                <li><b>Normalizar</b> los datos y mantenerlos en <b>1 nivel, sin anidar</b></li>
+                <li>Sólo utilizar <b>arrays para ids</b>, mediante una estructura <code>{ ids: [], entities: {} }</code>
+                (para States de tipo "lista")</li>
+                <li></li>
+              </ul>
+              <p>Esto <b>favorece el mantenimiento, mejora la escalabilidad y el rendimiento, y evita duplicados de datos</b>
+              <p><i>Tip: <a href="https://github.com/paularmstrong/normalizr">Normalizr</a> es de gran ayuda,
+              aunque no es necesario.</i></p>
+            </details>
+          </xp-annotations>
+        </div>
+      </body>
+    </html>

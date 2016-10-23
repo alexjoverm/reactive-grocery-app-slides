@@ -5,9 +5,10 @@ import { StoreModule } from '@ngrx/store'
 import { reducer } from './reducer'
 import { Selector } from './selector'
 
-// 2/ Importamos nuevos ficheros
+// 3/ Como siempre, importamos Actions en el módulo
 import { itemsReducer } from './items-reducer'
 import { ItemsSelector } from './items-selector'
+import { Actions } from './actions'
 
 import {App} from './app/app'
 import 'rxjs/Rx'
@@ -16,12 +17,11 @@ import 'rxjs/Rx'
   imports: [
     BrowserModule,
     FormsModule,
-    // Añadimos items al store
     StoreModule.provideStore({ lists: reducer, items: itemsReducer })
   ],
   declarations: [ App ],
-  // Añadimos ItemsSelector
-  providers: [ Selector, ItemsSelector ],
+  // y lo añadimos a providers
+  providers: [ Selector, ItemsSelector, Actions ],
   bootstrap: [ App ]
 })
 export class AppModule {}

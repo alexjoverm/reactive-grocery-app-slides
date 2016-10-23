@@ -1,10 +1,9 @@
-// 3/ En App component, ya no necesitamos referencias a
+import { Component } from '@angular/core'
+// 4/ En App component, ya no necesitamos referencias a
 // NgRx Store o los reducers. De eso se encarga actions.ts
-import { Component} from '@angular/core'
+import { Actions } from '../actions'
 import { Selector } from '../selector'
 import { ItemsSelector } from '../items-selector'
-// Importamos actions creator
-import { Actions } from '../actions'
 
 @Component({
   moduleId: __moduleName,
@@ -40,5 +39,4 @@ export class App {
     const item = Object.assign({}, this.newList, { id: randomId })
     this.actions.addListItem(item) // addListItem
   }
-
 }

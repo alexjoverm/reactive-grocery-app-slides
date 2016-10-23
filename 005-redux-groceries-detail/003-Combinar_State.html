@@ -1,0 +1,51 @@
+
+    <!DOCTYPE html>
+    <html xp-run-server-url="https://xpla.org">
+      <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width">
+        <title>Combinar State</title>
+        <script src="https://xpla.org/static/js/slide_loader.3.0.0.js"></script>
+      </head>
+      <body class="xp-slide">
+        <div class="xp-row with-comments">
+
+
+    <div class="xp-column">
+      <xp-editor active="src/app.module.ts" >
+        	<script id="src/app.module.ts" highlight="3-14,16-27" type="application/octetstream" src="003/src/app.module.ts"></script>
+	<script id="src/app/app.html" highlight="6-19" type="application/octetstream" src="003/src/app/app.html"></script>
+	<script id="src/app/app.ts" highlight="1-11,14-34,37-49" type="application/octetstream" src="003/src/app/app.ts"></script>
+	<script id="src/items-reducer.ts" highlight="1-23" type="application/octetstream" src="003/src/items-reducer.ts"></script>
+	<script id="src/items-selector.ts" highlight="1-19" type="application/octetstream" src="003/src/items-selector.ts"></script>
+	<script id="src/reducer.ts" highlight="1-46" type="application/octetstream" src="003/src/reducer.ts"></script>
+	<script id="src/selector.ts" highlight="1-17" type="application/octetstream" src="003/src/selector.ts"></script>
+	<script id="config.js" type="application/octetstream" src="001/config.js"></script>
+	<script id="index.html" type="application/octetstream" src="001/index.html"></script>
+	<script id="src/main.ts" type="application/octetstream" src="001/src/main.ts"></script>
+      </xp-editor>
+    </div>
+
+    <div class="xp-resize-column"></div>
+
+    <div class="xp-column">
+      <xp-preview runner="html"></xp-preview>
+    </div>
+
+
+        </div>
+        <div class="xp-resize-row"></div>
+        <div class="xp-row comments">
+          <xp-annotations>
+            <header><h1>Combinar State</h1></header>
+            <details>
+              <p>Hasta ahora hemos trabajado con una entidad en el State. La cosa se complica cuando añadimos
+                mas entidades.</p>
+              <p>Puede parecer compleja la estructura mostrada anteriormente, y lo es para pequeños ejemplos como estos.
+                Sin embargo, es conveniente cualquier app real-world.</p>
+              <p>Veámos como podemos estructurar <b>lists</b> y <b>items</b> en el Store.</p>
+            </details>
+          </xp-annotations>
+        </div>
+      </body>
+    </html>

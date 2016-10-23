@@ -1,0 +1,51 @@
+
+    <!DOCTYPE html>
+    <html xp-run-server-url="https://xpla.org">
+      <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width">
+        <title>Action Creators</title>
+        <script src="https://xpla.org/static/js/slide_loader.3.0.0.js"></script>
+      </head>
+      <body class="xp-slide">
+        <div class="xp-row with-comments">
+
+
+    <div class="xp-column">
+      <xp-editor active="src/actions.ts" >
+        	<script id="src/actions.ts" highlight="1-22" type="application/octetstream" src="004/src/actions.ts"></script>
+	<script id="src/app.module.ts" highlight="5-14,17-27" type="application/octetstream" src="004/src/app.module.ts"></script>
+	<script id="src/app/app.ts" highlight="1-44" type="application/octetstream" src="004/src/app/app.ts"></script>
+	<script id="config.js" type="application/octetstream" src="001/config.js"></script>
+	<script id="index.html" type="application/octetstream" src="001/index.html"></script>
+	<script id="src/items-reducer.ts" type="application/octetstream" src="003/src/items-reducer.ts"></script>
+	<script id="src/items-selector.ts" type="application/octetstream" src="003/src/items-selector.ts"></script>
+	<script id="src/main.ts" type="application/octetstream" src="001/src/main.ts"></script>
+	<script id="src/reducer.ts" type="application/octetstream" src="003/src/reducer.ts"></script>
+	<script id="src/selector.ts" type="application/octetstream" src="003/src/selector.ts"></script>
+	<script id="src/app/app.html" type="application/octetstream" src="003/src/app/app.html"></script>
+      </xp-editor>
+    </div>
+
+    <div class="xp-resize-column"></div>
+
+    <div class="xp-column">
+      <xp-preview runner="html"></xp-preview>
+    </div>
+
+
+        </div>
+        <div class="xp-resize-row"></div>
+        <div class="xp-row comments">
+          <xp-annotations>
+            <header><h1>Action Creators</h1></header>
+            <details>
+              <p>Podemos añadir un punto más de abstracción. Si te has fijado anteriormente, los Containers
+                utilizan <code>store.dispatch</code>. Al igual que los <b>Selectors</b>, esa lógica la podemos mover
+                fuera del componente mediante <b>Action creators</b>.</p>
+              <p>Un <b>Action creator</b> es una simple función que lanzar uno o más <b>Actions</b>.</p>
+            </details>
+          </xp-annotations>
+        </div>
+      </body>
+    </html>

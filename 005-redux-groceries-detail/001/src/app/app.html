@@ -1,0 +1,12 @@
+<h2>Listas</h2>
+
+<section>
+  <h3>Async pipe lists$</h3>
+  <p *ngFor="let list of lists$ | async">
+    {{list.title}}
+  </p>
+
+  <input [(ngModel)]="newList.title">
+  <br>
+  <button (click)="createList()">Crear lista</button><br>
+</section>

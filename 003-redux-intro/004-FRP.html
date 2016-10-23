@@ -9,8 +9,8 @@
       </head>
       <body class="xp-slide">
         <div class="xp-row with-comments">
-          
-    
+
+
     <div class="xp-column">
       <xp-editor active="src/app.module.ts" >
         	<script id="src/app.module.ts" highlight="6-14" type="application/octetstream" src="004/src/app.module.ts"></script>
@@ -22,22 +22,29 @@
 	<script id="src/main.ts" type="application/octetstream" src="001/src/main.ts"></script>
       </xp-editor>
     </div>
-  
+
     <div class="xp-resize-column"></div>
-    
+
     <div class="xp-column">
       <xp-preview runner="html"></xp-preview>
     </div>
-  
-  
+
+
         </div>
         <div class="xp-resize-row"></div>
         <div class="xp-row comments">
           <xp-annotations>
             <header><h1>Functional Reactive Programming</h1></header>
-            
+            <details>
+              <p>En los ejemplos hemos estado utilizando <code>| async</code>, que se conoce como <b>Async pipe</b>.
+              <b>Pipes</b> en Angular 2 son como filters en Angular 1.</p>
+              <p>Angular 2 utiliza <b>RxJS</b>, librería de <b>Streams</b> y <b>Observables</b>. Con ella podemos
+              aplicar <b>FRP</b> (Functional Reactive Programming), que extiende los conceptos de FP con Observables.</p>
+              <p>Async pipe en particular, subscribe automáticamente a un Observable. Se realiza una subscripción por async pipe,
+                por lo que si se van a realizar multiples en el mismo stream, es mejor subscribir manualmente.
+              </p>
+            </details>
           </xp-annotations>
         </div>
       </body>
     </html>
-  

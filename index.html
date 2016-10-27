@@ -9,18 +9,31 @@
     <link type="text/css" rel="stylesheet" media="all" href="https://xpla.org/static/css/deck.3.0.0.css">
     <style>
       body {
-        margin: 5rem;
+        margin: 2rem 5rem;
       }
-      a[hhref] {
-        color: #aaa;
+      hr {
+        margin-top: 14px;
+        margin-bottom: 14px;
       }
+      header aside { font-size: 20px; }
+      aside { display: inline-block; }
+      aside + aside { float: right; }
+      aside.image img { width: 50px; }
+      aside.text p { margin: 0 0 6px 0; }
     </style>
     <script src="tracking.js"></script>
   </head>
   <body style="text-align: center">
     <div style="min-width: 60vw; margin: 0 auto; display:inline-block; width: auto;text-align: left">
+      <header class="row">
+        <aside class="image"><img src="devmeetings.png" alt=""> DevMeetings</aside>
+        <aside class="text">
+          <p><a href="https://twitter.com/alexjoverm">@alexjoverm</a></p>
+          <p style="font-size: 16px;">Valencia, 29 de Octubre de 2016</p>
+        </aside>
+      </header>
       <h1 style="text-align: center">Angular 2 y Redux</h1>
-      <h3 style="text-align: center; color: #aaa;">Cómo crear una real-world app, usando buenas prácticas y escalable.</h3>
+      <h3 style="text-align: center; color: #aaa; font-size: 23px;">Cómo crear una real-world app, usando buenas prácticas y escalable.</h3>
       <h3><a href="001-create-app/index.html">Sprint 1 - Que empiece la fiesta!</a></h3>
       <p>Cómo crear un módulo, realizar bootstraping y introducción básica general.</p>
       <h3><a href="002-first-components/index.html">Sprint 2 - Hablémos de componentes</a></h3>
@@ -29,8 +42,12 @@
       <p>Refactorizar app usando Redux. Crear primer Reducer, Actions, y obtención selectiva del Store.</p>
       <h3><a href="004-router-groceries-detail/index.html">Sprint 4 - Router, añadir items y editar lista</a></h3>
       <p>Cómo añadir rutas y interactuar entre ellas. Crear GroceryDetails container y ListItem component.</p>
+      <hr>
+      <h4 style="color: #777"><a href="https://docs.google.com/forms/d/e/1FAIpQLSdFSmUB_a5zvi_VeppqHcTGKlYU9l6HilHzArnVIOKaVGNzdA/viewform?c=0&w=1">Formulario</a></h4>
+      <hr>
       <h3><a href="005-redux-groceries-detail/index.html">Sprint 5 - Redux avanzado</a></h3>
       <p>Escalabilidad, organización y rendimiento en Redux. Refactorizar Sprint 4 usando Redux.</p>
     </div>
+
   </body>
 </html>

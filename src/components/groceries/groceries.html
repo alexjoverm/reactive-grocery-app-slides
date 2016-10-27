@@ -4,25 +4,22 @@
   <list [list]="list" (delete)="deleteList($event)"
     *ngFor="let list of lists"></list>
 
-  <!--2/ Angular añade la directiva ngForm a todos los formularios-->
-  <!--Podemos usar una refencia (simbolo #) para acceder a un elemento del template-->
+  <!--10/ Cada componente de Angular Material tiene diferente API-->
+  <!--Lo mejor es consultar la doc de cada uno-->
   <form (ngSubmit)="createList(tempList)" #listForm="ngForm">
-    <!--2/ Utilizamos attributos HTML5 para las condiciones-->
-    <input name="title" [(ngModel)]="tempList.title"
-      required minlength="3" maxlength="20">
+    <!-- 2/ Reemplazamos input por md-input -->
+    <md-input name="title" placeholder="Titulo" [(ngModel)]="tempList.title"
+      required minlength="3" maxlength="20"></md-input>
 
-    <!--3/ Mediante attribute binding y la referencia listForm, -->
-    <!-- podemos acceder a la propiedad form para comprobar su validez-->
-    <button type="submit"
+    <!-- 2/ Añadimos md-raised-button y color="primary" -->
+    <button type="submit" md-raised-button color="primary"
       [disabled]="!listForm.form.valid">Crear lista</button>
   </form>
 
   <form (ngSubmit)="createList(tempList)" #otherForm="ngForm">
-    <!--2/ También puedes añadir una referencia a ngModel en los inputs-->
     <input name="title" [(ngModel)]="tempList.title"
       #title="ngModel" required>
 
-    <!--3/ Así puedes mostrar mensajes por campo-->
     <span [hidden]="title.valid || (title.pristine && !otherForm.submitted)">
       El titulo es requerido
     </span>

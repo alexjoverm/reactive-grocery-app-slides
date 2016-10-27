@@ -30,6 +30,9 @@ System.config({
     '@angular/http/testing': 'npm:@angular/http/bundles/http-testing.umd.js',
     '@angular/router/testing': 'npm:@angular/router/bundles/router-testing.umd.js',
 
+    // Añadir Angular Material en config.js (SystemJS)
+    '@angular/material': 'npm:@angular/material/material.umd.js',
+
     'rxjs': 'npm:rxjs',
     'typescript': 'npm:typescript@2.0.2/lib/typescript.js'
   },

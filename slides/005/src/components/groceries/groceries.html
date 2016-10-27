@@ -1,0 +1,30 @@
+<h2>Listas de compra:</h2>
+
+<section>
+  <list [list]="list" (delete)="deleteList($event)"
+    *ngFor="let list of lists"></list>
+
+  <!--10/ Cada componente de Angular Material tiene diferente API-->
+  <!--Lo mejor es consultar la doc de cada uno-->
+  <form (ngSubmit)="createList(tempList)" #listForm="ngForm">
+    <!-- 2/ Reemplazamos input por md-input -->
+    <md-input name="title" placeholder="Titulo" [(ngModel)]="tempList.title"
+      required minlength="3" maxlength="20"></md-input>
+
+    <!-- 2/ Añadimos md-raised-button y color="primary" -->
+    <button type="submit" md-raised-button color="primary"
+      [disabled]="!listForm.form.valid">Crear lista</button>
+  </form>
+
+  <form (ngSubmit)="createList(tempList)" #otherForm="ngForm">
+    <input name="title" [(ngModel)]="tempList.title"
+      #title="ngModel" required>
+
+    <span [hidden]="title.valid || (title.pristine && !otherForm.submitted)">
+      El titulo es requerido
+    </span>
+
+    <button type="submit"
+      [disabled]="!otherForm.form.valid">Crear lista</button>
+  </form>
+</section>
